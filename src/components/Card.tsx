@@ -5,13 +5,13 @@ type CityInfo = {
   visited?: boolean;
 };
 
-function Card(props: CityInfo) {
+function Card({ city, country, imageUrl, visited }: CityInfo) {
   return (
     <div className="card">
-      <h2>{props.city}</h2>
-      <h3>{props.country}</h3>
-      <img src={ props.imageUrl } alt={ props.city } />
-      {props.visited ? <p>Já Fui!</p> : <p>Não Fui.</p>}
+      <h2>{city}</h2>
+      <h3>{country}</h3>
+      <img src={ imageUrl } alt={ city } />
+      {visited ? <p>Já Fui!</p> : <p>Não Fui.</p>}
     </div>
   );
 }
