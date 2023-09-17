@@ -5,7 +5,7 @@ type CityInfo = {
   visited?: boolean;
 };
 
-function Card({ city, country, imageUrl, visited }: CityInfo) {
+function Card({ city, country, imageUrl, visited = false }: CityInfo) {
   return (
     <div className="card">
       <h2>{city}</h2>
